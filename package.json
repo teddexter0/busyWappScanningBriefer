@@ -1,0 +1,45 @@
+{
+  "name": "scanningbriefer",
+  "displayName": "Scanning Briefer",
+  "version": "0.1.0",
+  "description": "A local-first WhatsApp Web unread briefing Chrome extension.",
+  "author": "Ted",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^1.15.0",
+    "lucide-react": "^0.468.0",
+    "plasmo": "^0.90.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.3"
+  },
+  "manifest": {
+    "name": "Scanning Briefer",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://web.whatsapp.com/*",
+      "http://localhost:11434/*",
+      "http://127.0.0.1:11434/*"
+    ]
+  }
+}
